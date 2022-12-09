@@ -56,7 +56,7 @@ void check_neighboured()
                 else if( ch == ' ' || ch == '\n')
                 {
                     putchar(ch);
-                    if ((set_1 != set_2)&&(set_1 != 67108864)){
+                    if ((set_1 == set_2)&&(set_1 != 67108864)){
                         flag = true;
                     }
                     set_1 = set_2;
@@ -69,12 +69,12 @@ void check_neighboured()
                     continue;
                 }    
         }
-        if ((set_1 != set_2)&&(set_1 != 67108864))
+        if ((set_1 == set_2)&&(set_1 != 67108864))
         {
             flag = true;
         }
     }
-    if (flag)
+    if (flag==false)
     {
         printf("\n\n\nUraPobeda!");
     }
