@@ -74,13 +74,13 @@ void check_neighboured()
             flag = true;
         }
     }
-    if (flag==false)
+    if (!flag)
     {
-        printf("\n\n\nUraPobeda!");
+        printf("\n\n\nYes!");
     }
     else
     {
-        printf("\n\n\nNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+        printf("\n\n\nNO");
     }
 }
 
