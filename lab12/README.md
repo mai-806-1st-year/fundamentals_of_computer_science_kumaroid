@@ -2,7 +2,7 @@
 
 <b>Студент группы:</b> <ins>М80-108Б-22 Иванов Андрей Кириллович, № по списку 10</ins> 
 
-<b>Контакты e-mail:</b> <ins>doly2004e@yandex.ru</ins>
+<b>Контакты e-mail:</b> <ins>andr-ushka2@yandex.ru</ins>
 
 <b>Работа выполнена:</b> <ins>«2» <ins>Декабря</ins> <ins>2022</ins> г.
 
