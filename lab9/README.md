@@ -42,7 +42,7 @@
 Подпись преподавателя _____________________
 ## 8. Распечатка протокола 
 ``` 
-https://github.com/mai-806-1st-year/fundamentals_of_computer_science_kumaroid/blob/main/lab9/lab9_def.c#L46-L101
+https://github.com/mai-806-1st-year/fundamentals_of_computer_science_kumaroid/blob/main/lab9/lab9_def.c#L1-L101
 #include <stdio.h> 
 #include <stdlib.h>
 #include<conio.h>
