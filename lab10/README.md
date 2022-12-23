@@ -1,16 +1,16 @@
 # Отчёт по лабораторной работе №10 по курсу "Фундаментальная информатика"
 
-<b>Студент группы:</b> <ins>М80-108Б-22 Былькова Кристина Алексеевна, № по списку 2</ins> 
+<b>Студент группы:</b> <ins>М80-108Б-22 Иванов Андрей Кириллович, № по списку 10</ins> 
 
-<b>Контакты e-mail:</b> <ins>kristina.bilckova@yandex.ru</ins>
+<b>Контакты e-mail:</b> <ins>andr-ushka2@yandex.ru</ins>
 
 <b>Работа выполнена:</b> «29» <ins>октября</ins> <ins>2022</ins> г.
 
 <b>Преподаватель:</b> <ins>асп. каф. 806 Сахарин Никита Александрович</ins>
 
-<b>Входной контроль знаний с оценкой:</b> <ins>5 (отлично)</ins>
+<b>Входной контроль знаний с оценкой:</b> <ins></ins>
 
-<b>Отчет сдан</b> «29» <ins>октября</ins> <ins>2022</ins> г., <b>итоговая оценка</b> <ins>5 (отлично)</ins>
+<b>Отчет сдан</b> «30» <ins>октября</ins> <ins>2022</ins> г., <b>итоговая оценка</b> <ins></ins>
 
 <b>Подпись преподавателя:</b> ________________
 
@@ -44,7 +44,7 @@
 
 <b>Прикладные системы и программы:</b> gcc, gdb 
 
-<b>Местонахождение и имена файлов программ и данных на домашнем компьютере:</b> /home/kristina
+<b>Местонахождение и имена файлов программ и данных на домашнем компьютере:</b> /home/Nword
 
 ## 6. Идея, метод, алгоритм решения задачи (в формах: словесной, псевдокода, графической [блок-схема, диаграмма, рисунок, таблица] или формальные спецификации с пред- и постусловиями)
 
@@ -86,8 +86,8 @@ int main () {
 <b>Подпись преподавателя:</b> ________________
 ## 8. Распечатка протокола 
 ```
-kristina@kristina-VirtualBox:~/Рабочий стол/lab10$ cc -g lab10.c
-kristina@kristina-VirtualBox:~/Рабочий стол/lab10$ gdb a.out
+Nword@Nword-VirtualBox:~/Рабочий стол/lab10$ cc -g lab10.c
+Nword@Nword-VirtualBox:~/Рабочий стол/lab10$ gdb a.out
 GNU gdb (Ubuntu 12.0.90-0ubuntu1) 12.0.90
 Copyright (C) 2022 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -142,7 +142,7 @@ Command name abbreviations are allowed if unambiguous.
 Breakpoint 1 at 0x11a4: file lab10.c, line 4.
 (gdb) start
 Temporary breakpoint 2 at 0x555555555195: file lab10.c, line 3.
-Starting program: /home/kristina/Рабочий стол/lab10/a.out 4
+Starting program: /home/Nword/Рабочий стол/lab10/a.out 4
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 
@@ -154,7 +154,7 @@ Argument list to give program being debugged when it is started is "1 1".
 (gdb) run
 The program being debugged has been started already.
 Start it from the beginning? (y or n) y
-Starting program: /home/kristina/Рабочий стол/lab10/a.out 1 1
+Starting program: /home/Nword/Рабочий стол/lab10/a.out 1 1
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 
@@ -174,7 +174,7 @@ Continuing.
 0
 [Inferior 1 (process 1946) exited normally]
 (gdb) quit
-kristina@kristina-VirtualBox:~/Рабочий стол/lab10$ gdb a.out
+Nword@Nword-VirtualBox:~/Рабочий стол/lab10$ gdb a.out
 GNU gdb (Ubuntu 12.0.90-0ubuntu1) 12.0.90
 Copyright (C) 2022 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -193,7 +193,7 @@ Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...
 (gdb) start
 Temporary breakpoint 1 at 0x1195: file lab10.c, line 3.
-Starting program: /home/kristina/Рабочий стол/lab10/a.out 
+Starting program: /home/Nword/Рабочий стол/lab10/a.out 
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 
@@ -214,7 +214,7 @@ Continuing.
 20
 [Inferior 1 (process 2067) exited normally]
 (gdb) quit
-kristina@kristina-VirtualBox:~/Рабочий стол/lab10$ exit
+Nword@Nword-VirtualBox:~/Рабочий стол/lab10$ exit
 ```
 ## 9. Дневник отладки должен содержать дату и время сеансов отладки и основные события (ошибки в сценарии и программе, нестандартные ситуации) и краткие комментарии к ним. В дневнике отладки приводятся сведения об использовании других ЭВМ, существенном участии преподавателя и других лиц в написании и отладке программы.
 
@@ -223,8 +223,8 @@ kristina@kristina-VirtualBox:~/Рабочий стол/lab10$ exit
 | 1 | дом. | 29.10.22 | 13:00 | Выполнение лабораторной работы | - | - |
 ## 10. Замечания автора по существу работы — Написание команд для отработки навыков работы в ОС UNIX.
 ```
-kristina@kristina-VirtualBox:~/Рабочий стол/lab10$ cc -g lab10.c
-kristina@kristina-VirtualBox:~/Рабочий стол/lab10$ gdb a.out
+Nword@Nword-VirtualBox:~/Рабочий стол/lab10$ cc -g lab10.c
+Nword@Nword-VirtualBox:~/Рабочий стол/lab10$ gdb a.out
 GNU gdb (Ubuntu 12.0.90-0ubuntu1) 12.0.90
 Copyright (C) 2022 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -255,7 +255,7 @@ Reading symbols from a.out...
 (gdb) break lab10.c:7 if i == 3
 Breakpoint 1 at 0x11cf: file lab10.c, line 7.
 (gdb) run
-Starting program: /home/kristina/Рабочий стол/lab10/a.out 
+Starting program: /home/Nword/Рабочий стол/lab10/a.out 
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 7
