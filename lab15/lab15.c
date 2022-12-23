@@ -1,39 +1,103 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-void out(int N, int m[], int n_g){
-    int b[N*N];
-    for (int k=n_g%(N*N)-1; k>=0;k--)
-    {
-        b[k] = m[N*N - (n_g%(N*N) - k)];
+#define N (100000)
+ 
+ 
+typedef long long ll;
+ 
+ 
+typedef struct{
+    ll color;
+    ll m, n;
+} color_index;
+ 
+int comp_m (const void *_a, const void *_b)
+{
+    color_index *a = (color_index *) _a;
+    color_index *b = (color_index *) _b;
+    if (a->color == b->color){
+        return a->m - b->m;
     }
-    for (int k=0;k<N*N-n_g%(N*N);k++)
-    {
-        b[k + n_g%(N*N)] = m[k];
+    return a->color - b->color;
+}
+ 
+ 
+int comp_n (const void *_a, const void *_b)
+{
+    color_index *a = (color_index *) _a;
+    color_index *b = (color_index *) _b;
+    if (a->color == b->color){
+        return a->n - b->n;
     }
-    printf("OUT:\n");
-    for (int i = 0; i < N; i++){
-        for (int j = 0; j < N; j++){
-        printf("%d ", b[i * N + j]);
+    return a->color - b->color;
+}
+ 
+ 
+int main()
+{
+    ll i, j;
+    scanf("%lld %lld", &i, &j);
+    color_index color_mas[i*j];
+    ll color_counter[N + 1] = {0};
+    ll k = 0;
+    for (ll m = 0; m < i; m++)
+    {
+        for (ll n = 0; n < j; n++)
+        {
+            ll col;
+            scanf("%lld", &col);
+            color_mas[k].color = col;
+            color_mas[k].m = m;
+            color_mas[k].n = n;
+            color_counter[col] += 1;
+            k++;
         }
-        printf("\n");
     }
-    }
-
-
-int main(){
-    int N;
-    int n_g;
-    printf("GROUP NUMBER\n");
-    scanf("%d", &n_g);
-    printf("MATRIX SIZE:\n");
-    scanf("%d", &N);
-    int m[N*N];
-    printf("MATRIX:\n");
-    for (int k = 0; k != N*N; k++)
+    ll full_counter = 0;
+    ll f_color = color_mas[0].color;
+    ll temp = 0;
+    if (i > 1)
     {
-        scanf("%d", &m[k]);
+        qsort(color_mas, i*j, sizeof(color_index), comp_m);
+        for (ll f = 0; f < i*j; ++f)
+        {
+            if (f_color != color_mas[f].color) 
+            {
+                temp = f;
+                f_color = color_mas[f].color;
+            }
+            full_counter += (2*(f - temp) + 1 - color_counter[f_color])*color_mas[f].m;
+        }
+        if (j > 1)
+        {
+            qsort(color_mas, i*j, sizeof(color_index), comp_n);
+            f_color = color_mas[0].color;
+            temp = 0;
+            for (ll f = 0; f < i*j; ++f)
+            {
+                if (f_color != color_mas[f].color) 
+                {
+                    temp = f;
+                    f_color = color_mas[f].color;
+                }
+                full_counter += (2*(f - temp) + 1 - color_counter[f_color])*color_mas[f].n;
+            }
+        }
+    }else if (j > 1)
+    {
+        qsort(color_mas, i*j, sizeof(color_index), comp_n);
+        f_color = color_mas[0].color;
+        temp = 0;
+        for (ll f = 0; f < i*j; ++f)
+        {
+            if (f_color != color_mas[f].color) 
+            {
+                temp = f;
+                f_color = color_mas[f].color;
+            }
+            full_counter += (2*(f - temp) + 1 - color_counter[f_color])*color_mas[f].n;
+        }
     }
-    out(N, m, n_g);
-    
-    }
+    printf("%lld", full_counter);
+    return 0;
+}
