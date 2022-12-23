@@ -41,64 +41,13 @@
 Допущен к выполнению работы.  
 Подпись преподавателя _____________________
 ## 8. Распечатка протокола 
-```c:
-#include <stdio.h> 
-#include <stdlib.h>
-#include<conio.h>
+c:\Users\1\Downloads>gcc main.c -o h
 
-#define MAX(a,b) ((a > b))? (a) : (b)
-#define MIN(a,b) ((a < b))? (a) : (b)
-
-int sign(int a)
-{
-    if (a > 0){
-        return 1;
-    }
-
-    if (a == 0){
-        return 0;
-    }
-
-    return -1;
-}
-
-int main()
-{
-    int i = 24;
-    int j = -14;
-    int l = 9;
-    int f = 0;
-    int ik = i, jk = j, lk = l;
-
-    for (int k = 0; k <= 50; ++k)
-    {
-        
-        i = ik;
-        j = jk;
-        l = lk;
-
-        ik = ((i + k)*(j - k)*(l+k))%25;
-
-        jk = MIN((i+k),MAX((j-k),(l-k)));
-
-        lk = abs(j-k)*sign(i) - abs(i-l)*sign(j);
-
-        printf("%d, %d, %d, %d\n", k, ik, jk, lk);
-
-        if ((ik >= 5 && ik <= 15) && (jk <= -5 && jk >= -15)){
-            f = 1;
-            printf("got it in %d = count of attempts, %d = x coord, %d = y coord, %d\n", k, ik, jk, lk);
-            break;
-        }
-    }
-    if (f==0)
-    {
-        printf("missed. %d - x coord, %d - y coord, %d - l variable \n", ik, jk, lk);
-    }
-
-    return 0;
-}
-
+c:\Users\1\Downloads>h
+1, 16, 6, 28
+2, 9, 7, 28
+3, 2, 8, 28
+got it in 3 = count of attempts, 2 - x coord, 8 - y coord, 28
 ```
 ## 9. Дневник отладки должен содержать дату и время сеансов отладки и основные события (ошибки в сценарии и программе, нестандартные ситуации) и краткие комментарии к ним. В дневнике отладки приводятся сведения об использовании других ЭВМ, существенном участии преподавателя и других лиц в написании и отладке программы.
 
