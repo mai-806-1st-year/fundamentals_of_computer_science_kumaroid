@@ -65,10 +65,10 @@ void check_neighboured(){
                     putchar(ch);
                     continue;
                 }    
-        }
-        if ((set_1 == set_2)&&(set_1 != 67108864)){
+        }    
+    }
+    if ((set_1 == set_2)&&(set_1 != MAX_ALPHABET)){
             flag = true;
-        }
     }
     if (!flag)
     {
