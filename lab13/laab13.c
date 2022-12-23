@@ -72,9 +72,9 @@ void check_neighboured(){
     }
     if (!flag)
     {
-        printf("\n\n\nYES!");
+        printf("\n\n\nYes!");
     } else{
-        printf("\n\n\nNO");
+        printf("\n\n\nNo");
     }
 }
 
